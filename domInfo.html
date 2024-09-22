@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Information</title>
+    <!-- Lexend Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- DaisyUl -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind configuration CND -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_yellow: "#F9F7F3",
+            },
+            fontFamily: {
+              Lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Lexend bg-white">
+    <!-- Header section -->
+    <header class="w-full py-10 bg-bg_yellow sticky top-0 z-50">
+      <div class="flex justify-evenly">
+        <button
+          class="bg-btn_primary px-10 py-3 rounded-lg text-black text-xl font-semibold"
+        >
+          Home
+        </button>
+        <div class="flex justify-center items-center gap-3 font-semibold">
+          <img src="assets/logo.png" alt="" /><span>Donate Bangladesh</span>
+        </div>
+        <div class="flex justify-center items-center gap-3 font-semibold">
+          <img src="assets/coin.png" alt="" /><span>5500</span> BDT
+        </div>
+      </div>
+    </header>
+
+    <section class="w-10/12 mx-auto bg-bg_white mt-20">
+      <h1 class="text-3xl mb-6 pl-2">
+        Important FAQ <i class="fa-solid fa-question"></i>
+      </h1>
+      <!-- 1st div -->
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300 bg-base-200 border mb-5"
+      >
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            A programming interface for web documents, the Document Object Model
+            (DOM) depicts an HTML or XML document's structure as a tree of
+            objects. Every component of the document—tags, attributes, and
+            text—becomes a node in the tree. <br />
+            Important characteristics: Tree Structure: The document is shown as
+            a hierarchical tree, with branches for each element and the document
+            itself as the root node. Access and Manipulation: JavaScript can use
+            the DOM to dynamically access, alter, add, or remove elements. Event
+            Handling: This feature enables real-time recording and reaction to
+            user input, such as keystrokes or clicks. Developers may interact
+            and modify a webpage's structure, style, and content
+            programmatically with the help of the DOM.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2nd div -->
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300 bg-base-200 border mb-5"
+      >
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            To select an element from the DOM, you typically use JavaScript
+            methods like getElementById(), getElementsByClassName(),
+            getElementsByTagName(), querySelector(), and querySelectorAll().
+            <br />
+            Here’s how each one works: document.getElementById(id): Selects an
+            element by its unique id.<br />
+            let element = document.getElementById("myElement");<br />document.getElementsByClassName(className):
+            Selects all elements with a specific class (returns a
+            collection).let elements =
+            document.getElementsByClassName("myClass"); <br /><br />
+            document.getElementsByTagName(tagName): Selects all elements with a
+            specific tag (like div, p, span). javascript Copy code let elements
+            = document.getElementsByTagName("div");
+            document.querySelector(cssSelector): Selects the first element that
+            matches a CSS selector (id, class, tag). javascript Copy code let
+            element = document.querySelector(".myClass"); // First element with
+            class document.querySelectorAll(cssSelector): Selects all elements
+            that match a CSS selector (returns a NodeList). javascript Copy code
+            let elements = document.querySelectorAll("div.myClass"); // All divs
+            with class These methods allow you to navigate and manipulate
+            elements in the DOM dynamically.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3rd div -->
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300 bg-base-200 border mb-5"
+      >
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is if
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is a technique in JavaScript where a single event
+            listener is added to a parent element instead of adding separate
+            listeners to individual child elements. This leverages the event
+            bubbling phase, where events propagate from the target element up to
+            its ancestors. How It Works: When an event occurs on a child
+            element, it bubbles up to the parent. The parent listens for the
+            event and can determine which child element triggered it. Example:
+            javascript Copy code
+            document.getElementById("parent").addEventListener("click",
+            function(event) { if (event.target.matches(".child")) { // Handle
+            the event for the child element console.log("Child element
+            clicked:", event.target); } }); Benefits of Event Delegation:
+            Performance: Reduces memory usage by minimizing the number of event
+            listeners. This is especially beneficial in lists or dynamically
+            generated elements. Dynamic Elements: Automatically handles events
+            for new child elements added to the DOM after the event listener is
+            set up. You don't need to reattach listeners. Simpler Management:
+            Easier to manage events on a parent level rather than individually
+            on many children, simplifying code maintenance. Overall, event
+            delegation is a powerful technique that improves performance and
+            flexibility in handling events in web applications.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4th div -->
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300 bg-base-200 border mb-5"
+      >
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's and styles using DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            You can manipulate an element's content and styles using the DOM
+            with JavaScript by accessing the element and modifying its
+            properties. Here’s how to do it: Manipulating Content Change Inner
+            HTML: javascript Copy code
+            document.getElementById("myElement").innerHTML = "New content!";
+            Change Text Content: javascript Copy code
+            document.getElementById("myElement").textContent = "New text!"; Add
+            or Remove Attributes: javascript Copy code let element =
+            document.getElementById("myElement");
+            element.setAttribute("data-custom", "value"); // Add attribute
+            element.removeAttribute("data-custom"); // Remove attribute
+            Manipulating Styles Change Inline Styles: javascript Copy code
+            document.getElementById("myElement").style.color = "blue"; // Change
+            text color
+            document.getElementById("myElement").style.backgroundColor =
+            "yellow"; // Change background color Add or Remove CSS Classes:
+            javascript Copy code let element =
+            document.getElementById("myElement");
+            element.classList.add("newClass"); // Add a class
+            element.classList.remove("oldClass"); // Remove a class Toggle a
+            Class: javascript Copy code element.classList.toggle("active"); //
+            Add if not present, remove if present
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
