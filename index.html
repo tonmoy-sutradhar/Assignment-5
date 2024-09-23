@@ -80,18 +80,20 @@
       <!-- Fixed: fixed top-20 left-1/2 transform -translate-x-1/2 z-50 -->
       <div class="text-center gap-11 sticky top-16 z-40">
         <button
+          id="donate-btn"
           class="border border-gray-500 bg-btn_primary px-10 py-3 rounded-lg text-black text-xl font-semibold"
         >
           Donation
         </button>
         <button
+          id="history-btn"
           class="border border-gray-500 bg-btn_primary px-10 py-3 rounded-lg text-black text-xl font-semibold"
         >
           History
         </button>
       </div>
 
-      <!--1st Card section -->
+      <!--1st Card Noakhali section -->
       <div class="hero border border-gray-300 rounded-xl mt-11">
         <div class="hero-content flex-col lg:flex-row">
           <img src="assets/noakhali.png" alt="" />
@@ -100,7 +102,9 @@
               class="bg-bg_gray rounded-lg px-4 py-2 w-28 flex items-center mb-4"
             >
               <img src="assets/coin.png" alt="" />
-              <p class="font-semibold"><span class="px-2">0</span>BDT</p>
+              <p class="font-semibold">
+                <span id="noakhaliBlance" class="px-2">200</span>BDT
+              </p>
             </div>
             <h1 class="text-3xl font-bold">
               Donate for Flood at Noakhali, Bangladesh
@@ -115,12 +119,14 @@
             </p>
             <div class="flex flex-col">
               <input
+                id="inputFieldNokhaili"
                 type="text"
                 placeholder="Type here"
                 class="input input-bordered w-full mb-4"
               />
 
               <button
+                id="donateNokhai-btn"
                 class="w-full bg-btn_primary px-10 py-3 rounded-lg font-semibold"
               >
                 Donate Now
@@ -214,6 +220,6 @@
       </div>
     </main>
 
-    <script src="JS/action.js"></script>
+    <script src="JS/donate.js"></script>
   </body>
 </html>
