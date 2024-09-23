@@ -13,7 +13,6 @@ console.log("Hi I an connected.");
 document
   .getElementById("donateNokhai-btn")
   .addEventListener("click", function () {
-    // console.log("Donate now button clicked");
     const noakhaliBalance = parseFloat(
       document.getElementById("noakhaliBlance").innerText
     );
@@ -22,15 +21,50 @@ document
     const inputFielFordNokhaili = parseFloat(
       document.getElementById("inputFieldNokhaili").value
     );
-    // console.log(typeof inputFielFordNokhaili);
 
-    // const Nbalance = parseFloat(noakhaliBalance);
-    // const InputNBalance = parseFloat(inputFielFordNokhaili);
-
-    // const newBalance = Nbalance + InputNBalance;
     const newBalance = inputFielFordNokhaili + noakhaliBalance;
     console.log(newBalance);
 
     document.getElementById("noakhaliBlance").innerText = newBalance;
+    inputFielFordNokhaili.value = "";
+  });
+
+//Donate for Feni---->>
+document
+  .getElementById("feniDonate-btn")
+  .addEventListener("click", function () {
+    const noakhaliBalance = parseFloat(
+      document.getElementById("feniBalance").innerText
+    );
+    console.log(noakhaliBalance);
+
+    const inputFielFordNokhaili = parseFloat(
+      document.getElementById("feniInputField").value
+    );
+
+    const newBalance = inputFielFordNokhaili + noakhaliBalance;
+    console.log(newBalance);
+
+    document.getElementById("feniBalance").innerText = newBalance;
+    inputFielFordNokhaili.value = "";
+  });
+
+//Donate for Movement---->>
+document
+  .getElementById("movementDoante-btn")
+  .addEventListener("click", function () {
+    const noakhaliBalance = parseFloat(
+      document.getElementById("movementBalance").innerText
+    );
+    console.log(noakhaliBalance);
+
+    const inputFielFordNokhaili = parseFloat(
+      document.getElementById("movementInputFiled").value
+    );
+
+    const newBalance = inputFielFordNokhaili + noakhaliBalance;
+    console.log(newBalance);
+
+    document.getElementById("movementBalance").innerText = newBalance;
     inputFielFordNokhaili.value = "";
   });
