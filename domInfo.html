@@ -106,8 +106,8 @@
         </div>
         <div class="collapse-content">
           <p>
-            To select an element from the DOM, you typically use JavaScript
-            methods like getElementById(), getElementsByClassName(),
+            To select an element from the DOM, Typically use JavaScript methods
+            like getElementById(), getElementsByClassName(),
             getElementsByTagName(), querySelector(), and querySelectorAll().
             <br />
             Here’s how each one works: document.getElementById(id): Selects an
@@ -115,18 +115,14 @@
             let element = document.getElementById("myElement");<br />document.getElementsByClassName(className):
             Selects all elements with a specific class (returns a
             collection).let elements =
-            document.getElementsByClassName("myClass"); <br /><br />
+            document.getElementsByClassName("myClass"); <br />
             document.getElementsByTagName(tagName): Selects all elements with a
             specific tag (like div, p, span). javascript Copy code let elements
             = document.getElementsByTagName("div");
+            <br />
             document.querySelector(cssSelector): Selects the first element that
             matches a CSS selector (id, class, tag). javascript Copy code let
-            element = document.querySelector(".myClass"); // First element with
-            class document.querySelectorAll(cssSelector): Selects all elements
-            that match a CSS selector (returns a NodeList). javascript Copy code
-            let elements = document.querySelectorAll("div.myClass"); // All divs
-            with class These methods allow you to navigate and manipulate
-            elements in the DOM dynamically.
+            element = document.querySelector(".myClass");
           </p>
         </div>
       </div>
@@ -148,21 +144,19 @@
             bubbling phase, where events propagate from the target element up to
             its ancestors. How It Works: When an event occurs on a child
             element, it bubbles up to the parent. The parent listens for the
-            event and can determine which child element triggered it. Example:
-            javascript Copy code
+            event and can determine which child element triggered it.
+            <br />
             document.getElementById("parent").addEventListener("click",
             function(event) { if (event.target.matches(".child")) { // Handle
             the event for the child element console.log("Child element
-            clicked:", event.target); } }); Benefits of Event Delegation:
-            Performance: Reduces memory usage by minimizing the number of event
-            listeners. This is especially beneficial in lists or dynamically
-            generated elements. Dynamic Elements: Automatically handles events
-            for new child elements added to the DOM after the event listener is
-            set up. You don't need to reattach listeners. Simpler Management:
-            Easier to manage events on a parent level rather than individually
-            on many children, simplifying code maintenance. Overall, event
-            delegation is a powerful technique that improves performance and
-            flexibility in handling events in web applications.
+            clicked:", event.target); } });
+            <br />
+            Benefits of Event Delegation: Performance: Reduces memory usage by
+            minimizing the number of event listeners. This is especially
+            beneficial in lists or dynamically generated elements.<br />
+            Dynamic Elements: Automatically handles events for new child
+            Overall, event delegation is a powerful technique that improves
+            performance and flexibility in handling events in web applications.
           </p>
         </div>
       </div>
@@ -177,28 +171,25 @@
         </div>
         <div class="collapse-content">
           <p>
-            You can manipulate an element's content and styles using the DOM
-            with JavaScript by accessing the element and modifying its
-            properties. Here’s how to do it: Manipulating Content Change Inner
-            HTML: javascript Copy code
+            Manipulate an element's content and styles using the DOM with
+            JavaScript by accessing the element and modifying its properties.
+            Here’s how to do it: Manipulating Content Change Inner
+            <br />
             document.getElementById("myElement").innerHTML = "New content!";
-            Change Text Content: javascript Copy code
+            <br />
             document.getElementById("myElement").textContent = "New text!"; Add
             or Remove Attributes: javascript Copy code let element =
             document.getElementById("myElement");
-            element.setAttribute("data-custom", "value"); // Add attribute
-            element.removeAttribute("data-custom"); // Remove attribute
+            <br />
+            element.setAttribute("data-custom", "value");
+            <br />
+            element.removeAttribute("data-custom");
+            <br />
             Manipulating Styles Change Inline Styles: javascript Copy code
-            document.getElementById("myElement").style.color = "blue"; // Change
-            text color
+            document.getElementById("myElement").style.color = "blue";
+            <br />
             document.getElementById("myElement").style.backgroundColor =
-            "yellow"; // Change background color Add or Remove CSS Classes:
-            javascript Copy code let element =
-            document.getElementById("myElement");
-            element.classList.add("newClass"); // Add a class
-            element.classList.remove("oldClass"); // Remove a class Toggle a
-            Class: javascript Copy code element.classList.toggle("active"); //
-            Add if not present, remove if present
+            "yellow";
           </p>
         </div>
       </div>
