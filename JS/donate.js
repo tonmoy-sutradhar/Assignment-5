@@ -22,7 +22,7 @@ document
     const currentDate = new Date();
     const formattedDate = `${currentDate.toLocaleDateString()} ${currentDate.toLocaleTimeString()}`;
 
-    p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement on ${formattedDate}`;
+    p.innerText = `${inputFieldBalance} Taka is Donated for Donate for Flood at Noakhali, Bangladesh on ${formattedDate}`;
     document.getElementById("Donate-history").appendChild(p);
     document.getElementById("noakhaliBlance").innerText = newBalance;
 
@@ -73,7 +73,7 @@ document
     p.innerText = `${inputFieldBalance} Taka is Donated for  Donate Flood Relief in Feni,Bangladesh`;
     const currentDate = new Date();
     const formattedDate = `${currentDate.toLocaleDateString()} ${currentDate.toLocaleTimeString()}`;
-    p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement on ${formattedDate}`;
+    p.innerText = `${inputFieldBalance} Taka is Donated for Donate for Flood Relief in Feni,Bangladesh on ${formattedDate}`;
     document.getElementById("Donate-history").appendChild(p);
 
     my_modal_5.showModal();
