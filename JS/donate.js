@@ -13,7 +13,6 @@ console.log("Hi I an connected.");
 document
   .getElementById("donateNokhai-btn")
   .addEventListener("click", function () {
-    my_modal_5.showModal();
     const noakhaliBalance = parseFloat(
       document.getElementById("noakhaliBlance").innerText
     );
@@ -33,9 +32,31 @@ document
     const p = document.createElement("p");
     p.innerText = `${inputFieldBalance} Taka is Donated for Donate Flood at Noakhali,Bangladesh`;
     // console.log(p);
+    // Get the current date and time
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.toLocaleDateString()} ${currentDate.toLocaleTimeString()}`;
+
+    // Add the date and time to the donation message
+    p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement on ${formattedDate}`;
+
     document.getElementById("Donate-history").appendChild(p);
 
     document.getElementById("noakhaliBlance").innerText = newBalance;
+
+    my_modal_5.showModal();
+    // Prevent form default submission behavior
+    document
+      .getElementById("donationForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Close the modal here (you can customize this based on your modal behavior)
+        const modal = document.getElementById("my_modal_5");
+        modal.close(); // Close the modal programmatically
+
+        // You can also trigger any success logic here
+        // alert("Donation confirmed!");
+      });
 
     inputFielFordNokhaili.value = "";
 
@@ -76,7 +97,29 @@ document
     const p = document.createElement("p");
     p.innerText = `${inputFieldBalance} Taka is Donated for  Donate Flood Relief in Feni,Bangladesh`;
     // console.log(p);
+    // Get the current date and time
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.toLocaleDateString()} ${currentDate.toLocaleTimeString()}`;
+
+    // Add the date and time to the donation message
+    p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement on ${formattedDate}`;
+
     document.getElementById("Donate-history").appendChild(p);
+
+    my_modal_5.showModal();
+    // Prevent form default submission behavior
+    document
+      .getElementById("donationForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Close the modal here (you can customize this based on your modal behavior)
+        const modal = document.getElementById("my_modal_5");
+        modal.close(); // Close the modal programmatically
+
+        // You can also trigger any success logic here
+        // alert("Donation confirmed!");
+      });
 
     inputFielFordNokhaili.value = "";
 
@@ -118,6 +161,7 @@ document
     const p = document.createElement("p");
     p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement`;
     // console.log(p);
+
     // Get the current date and time
     const currentDate = new Date();
     const formattedDate = `${currentDate.toLocaleDateString()} ${currentDate.toLocaleTimeString()}`;
@@ -127,6 +171,20 @@ document
 
     document.getElementById("Donate-history").appendChild(p);
 
+    my_modal_5.showModal();
+    // Prevent form default submission behavior
+    document
+      .getElementById("donationForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Close the modal here (you can customize this based on your modal behavior)
+        const modal = document.getElementById("my_modal_5");
+        modal.close(); // Close the modal programmatically
+
+        // You can also trigger any success logic here
+        // alert("Donation confirmed!");
+      });
     inputFielFordNokhaili.value = "";
 
     // Navbar Balance------------------->>

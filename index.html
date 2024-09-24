@@ -240,18 +240,18 @@
         <div class="border border-gray-300 rounded-xl mt-11 text-center"></div>
         <div
           id="Donate-history"
-          class="text-2xl font-bold text-center border-4 border-spacing-16 border-green-300 rounded-xl py-3"
+          class="text-xl font-bold text-center border-2 border-spacing-16 border-green-300 rounded-xl py-3"
         >
-          <h1
-            class="text-center text-2xl text-violet-800 border-y-violet-900 border-4 rounded-xl mb-5"
-          >
+          <h1 class="text-center text-2xl text-violet-800 mb-5">
             Record history of Donation.
           </h1>
+          <div class="border border-gray-950"></div>
           <!-- <p id="timer"></p> -->
         </div>
       </div>
       <!-- History end  -->
     </main>
+
     <!-- Open the modal using ID.showModal() method -->
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box text-center">
@@ -260,7 +260,7 @@
         <p class="py-4">You Have Donated for Humankind</p>
         <h1 class="text-2xl font-bold">Successfully</h1>
         <div class="modal-action">
-          <form method="dialog ">
+          <form id="donationForm" method="dialog">
             <!-- if there is a button in form, it will close the modal -->
             <button class="btn mr-40">Close confirmation</button>
           </form>
