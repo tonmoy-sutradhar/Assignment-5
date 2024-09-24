@@ -13,6 +13,7 @@ console.log("Hi I an connected.");
 document
   .getElementById("donateNokhai-btn")
   .addEventListener("click", function () {
+    my_modal_5.showModal();
     const noakhaliBalance = parseFloat(
       document.getElementById("noakhaliBlance").innerText
     );
@@ -35,8 +36,6 @@ document
     document.getElementById("Donate-history").appendChild(p);
 
     document.getElementById("noakhaliBlance").innerText = newBalance;
-
-    my_modal_5.showModal();
 
     inputFielFordNokhaili.value = "";
 
