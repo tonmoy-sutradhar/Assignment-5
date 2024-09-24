@@ -60,6 +60,7 @@
     <header class="w-full py-5 bg-bg_yellow sticky top-0 z-50 bg-opacity-90">
       <div class="flex justify-evenly">
         <button
+          id="blog-btn"
           class="bg-btn_primary px-10 py-3 rounded-lg text-black text-xl font-semibold"
         >
           Blog
@@ -85,13 +86,13 @@
       >
         <button
           id="donate-show-btn"
-          class="border border-gray-500 bg-btn_primary px-10 py-3 rounded-lg text-black text-xl font-semibold"
+          class="border-2 border-gray-500 bg-btn_primary px-10 py-3 rounded-lg text-black text-xl font-semibold"
         >
           Donation
         </button>
         <button
           id="history-show-btn"
-          class="border border-gray-500 bg-btn_primary px-10 py-3 rounded-lg text-black text-xl font-semibold"
+          class="border-2 border-gray-500 bg-gray-300 px-10 py-3 rounded-lg text-black text-xl font-semibold"
         >
           History
         </button>
@@ -244,14 +245,31 @@
           <h1
             class="text-center text-2xl text-violet-800 border-y-violet-900 border-4 rounded-xl mb-5"
           >
-            History of Donation.
+            Record history of Donation.
           </h1>
+          <!-- <p id="timer"></p> -->
         </div>
       </div>
       <!-- History end  -->
     </main>
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box text-center">
+        <h3 class="text-3xl font-bold">Congrats!</h3>
+        <img class="pl-52" src="assets/coin.png" alt="" />
+        <p class="py-4">You Have Donated for Humankind</p>
+        <h1>Successfully</h1>
+        <div class="modal-action">
+          <form method="dialog ">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn mr-40">Close confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <script src="JS/donate.js"></script>
     <script src="JS/btn-features.js"></script>
+    <script src="JS/domInfo.js"></script>
   </body>
 </html>

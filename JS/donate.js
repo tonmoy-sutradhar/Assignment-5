@@ -36,6 +36,8 @@ document
 
     document.getElementById("noakhaliBlance").innerText = newBalance;
 
+    my_modal_5.showModal();
+
     inputFielFordNokhaili.value = "";
 
     // Navbar Balance----------------->>
@@ -117,6 +119,13 @@ document
     const p = document.createElement("p");
     p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement`;
     // console.log(p);
+    // Get the current date and time
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.toLocaleDateString()} ${currentDate.toLocaleTimeString()}`;
+
+    // Add the date and time to the donation message
+    p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement on ${formattedDate}`;
+
     document.getElementById("Donate-history").appendChild(p);
 
     inputFielFordNokhaili.value = "";
