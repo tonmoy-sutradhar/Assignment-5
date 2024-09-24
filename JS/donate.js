@@ -18,15 +18,29 @@ document
     );
     console.log(noakhaliBalance);
 
-    const inputFielFordNokhaili = parseFloat(
-      document.getElementById("inputFieldNokhaili").value
-    );
+    const inputFielFordNokhaili = document.getElementById("inputFieldNokhaili");
+    const inputFieldBalance = parseFloat(inputFielFordNokhaili.value);
 
-    const newBalance = inputFielFordNokhaili + noakhaliBalance;
+    if (isNaN(inputFieldBalance) || inputFieldBalance <= 0) {
+      alert("Please enter the valid number.");
+      return;
+    }
+    const newBalance = inputFieldBalance + noakhaliBalance;
     console.log(newBalance);
 
     document.getElementById("noakhaliBlance").innerText = newBalance;
     inputFielFordNokhaili.value = "";
+
+    // Navbar Balance----------------->>
+    document;
+    const navBalance = parseFloat(
+      document.getElementById("navbar-balance").innerText
+    );
+
+    const currentBalance = navBalance - inputFieldBalance;
+    console.log(currentBalance);
+
+    document.getElementById("navbar-balance").innerText = currentBalance;
   });
 
 //Donate for Feni---->>
@@ -38,15 +52,30 @@ document
     );
     console.log(noakhaliBalance);
 
-    const inputFielFordNokhaili = parseFloat(
-      document.getElementById("feniInputField").value
-    );
+    const inputFielFordNokhaili = document.getElementById("feniInputField");
+    const inputFieldBalance = parseFloat(inputFielFordNokhaili.value);
 
-    const newBalance = inputFielFordNokhaili + noakhaliBalance;
+    if (isNaN(inputFieldBalance) || inputFieldBalance <= 0) {
+      alert("Please enter the valid number.");
+      return;
+    }
+
+    const newBalance = inputFieldBalance + noakhaliBalance;
     console.log(newBalance);
 
     document.getElementById("feniBalance").innerText = newBalance;
     inputFielFordNokhaili.value = "";
+
+    // Navbar Balance---------------->>
+    document;
+    const navBalance = parseFloat(
+      document.getElementById("navbar-balance").innerText
+    );
+
+    const currentBalance = navBalance - inputFieldBalance;
+    console.log(currentBalance);
+
+    document.getElementById("navbar-balance").innerText = currentBalance;
   });
 
 //Donate for Movement---->>
@@ -58,13 +87,28 @@ document
     );
     console.log(noakhaliBalance);
 
-    const inputFielFordNokhaili = parseFloat(
-      document.getElementById("movementInputFiled").value
-    );
+    const inputFielFordNokhaili = document.getElementById("movementInputFiled");
+    const inputFieldBalance = parseFloat(inputFielFordNokhaili.value);
 
-    const newBalance = inputFielFordNokhaili + noakhaliBalance;
+    if (isNaN(inputFieldBalance) || inputFieldBalance <= 0) {
+      alert("Please enter the valid number.");
+      return;
+    }
+
+    const newBalance = inputFieldBalance + noakhaliBalance;
     console.log(newBalance);
 
     document.getElementById("movementBalance").innerText = newBalance;
     inputFielFordNokhaili.value = "";
+
+    // Navbar Balance------------------->>
+    document;
+    const navBalance = parseFloat(
+      document.getElementById("navbar-balance").innerText
+    );
+
+    const currentBalance = navBalance - inputFieldBalance;
+    console.log(currentBalance);
+
+    document.getElementById("navbar-balance").innerText = currentBalance;
   });
