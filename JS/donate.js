@@ -26,9 +26,16 @@ document
       return;
     }
     const newBalance = inputFieldBalance + noakhaliBalance;
-    console.log(newBalance);
+    // console.log(newBalance);
+
+    // History of donation
+    const p = document.createElement("p");
+    p.innerText = `${inputFieldBalance} Taka is Donated for Donate Flood at Noakhali,Bangladesh`;
+    // console.log(p);
+    document.getElementById("Donate-history").appendChild(p);
 
     document.getElementById("noakhaliBlance").innerText = newBalance;
+
     inputFielFordNokhaili.value = "";
 
     // Navbar Balance----------------->>
@@ -38,7 +45,7 @@ document
     );
 
     const currentBalance = navBalance - inputFieldBalance;
-    console.log(currentBalance);
+    // console.log(currentBalance);
 
     document.getElementById("navbar-balance").innerText = currentBalance;
   });
@@ -61,9 +68,15 @@ document
     }
 
     const newBalance = inputFieldBalance + noakhaliBalance;
-    console.log(newBalance);
-
+    // console.log(newBalance);
     document.getElementById("feniBalance").innerText = newBalance;
+
+    // History of donation
+    const p = document.createElement("p");
+    p.innerText = `${inputFieldBalance} Taka is Donated for  Donate Flood Relief in Feni,Bangladesh`;
+    // console.log(p);
+    document.getElementById("Donate-history").appendChild(p);
+
     inputFielFordNokhaili.value = "";
 
     // Navbar Balance---------------->>
@@ -99,6 +112,13 @@ document
     console.log(newBalance);
 
     document.getElementById("movementBalance").innerText = newBalance;
+
+    // History of donation
+    const p = document.createElement("p");
+    p.innerText = `${inputFieldBalance} Taka is Donated for Aid for Injured in the Quota Movement`;
+    // console.log(p);
+    document.getElementById("Donate-history").appendChild(p);
+
     inputFielFordNokhaili.value = "";
 
     // Navbar Balance------------------->>
